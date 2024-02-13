@@ -1,0 +1,44 @@
+/* Add this CSS to your stylesheet */
+@keyframes slideIn {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .form_wrapper {
+    animation: slideIn 0.5s ease-in-out forwards;
+  }
+  
+  .form_field {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    margin-right: 10px;
+    width: 200px;
+  }
+  .error {
+    color: red;
+    margin-top: 5px;
+  }
+  
+  .form_btn {
+    padding: 10px 20px;
+    font-size: 16px;
+
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .form_btn:hover {
+    background-color: #c82333;
+  }
+  
