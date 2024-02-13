@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "./Home.css"; // Import your custom CSS for styling
+import "./home.css"; // Import your custom CSS for styling
 import ProposeForm from "../components/ProposeForm";
 import HeroImage from "../static/images/hero.svg";
 
