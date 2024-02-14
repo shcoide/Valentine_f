@@ -4,7 +4,12 @@ import axios from "axios"; // Import Axios
 import LinkModal from "./LinkModal";
 import ConfettiCannon from "./ConfettiCannon";
 import createToast from "../utils/toast";
+
+
+
 const ProposeForm = ({ className = "" }) => {
+
+    
     const [to, setTo] = useState("");
     const [from, setFrom] = useState("");
     const [email, setEmail] = useState("");
@@ -29,12 +34,14 @@ const ProposeForm = ({ className = "" }) => {
             );
 
             console.log("Response:", response.data);
-            createToast(response.data,"Success") // Log the response
+            createToast(response.data,"Success")
+            toast.success('Successfully created!'); // Log the response
             setModal(true);
             setShowConfetti(true); 
         } catch (error) {
             console.error("Error:", error); 
-            createToast(error,"error") 
+            createToast(error,"error")
+            toast.error('Successfully created!'); 
         }
     };
     
@@ -51,7 +58,7 @@ const ProposeForm = ({ className = "" }) => {
                     />
                     <br></br>
                     <Form.Control
-                    
+
                         value={from}
                         onChange={(e) => setFrom(e.target.value)}
                         className="form_field"
