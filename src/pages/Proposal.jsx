@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Button, Col, Container, Row } from 'react-bootstrap';
 import { useParams } from 'react-router-dom';
 import GenQoutes from '../components/GenQoutes';
 import { images } from '../data/preload-image-list.json';
@@ -59,9 +58,9 @@ const Proposal = ({ className = '' }) => {
             }}
         >
             <div className="proposal_media bg-dark d-none d-md-block" />
-            <Container>
-                <Row>
-                    <Col md={6} className="ms-auto">
+            <div className="container">
+                <div className="row">
+                    <div className="col-md-6 ms-auto">
                         <div className="proposal_content py-5">
                             <div className="proposal_header">
                                 <h1 className="proposal_title h4">
@@ -73,16 +72,16 @@ const Proposal = ({ className = '' }) => {
                             <GenQoutes texts={texts} className="main-content" />
 
                             {currentText.id !== 'finished' ? (
-                                <Button variant="danger" onClick={handleClick}>
+                                <button className="btn btn-danger" onClick={handleClick}>
                                     {texts.length ? 'Next' : 'Continue'}
-                                </Button>
+                                </button>
                             ) : (
                                 ''
                             )}
                         </div>
-                    </Col>
-                </Row>
-            </Container>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };
