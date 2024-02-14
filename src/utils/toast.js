@@ -25,3 +25,10 @@ const createToast = (text, type, time = 3) => {
 };
 
 export default createToast;
+
+
+
+
+
+
+
